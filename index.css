@@ -1,0 +1,40 @@
+/* global selector */
+* {
+  padding: 0;
+  /* font-size: 30px; */
+}
+
+/* id slector */
+#name {
+  border: 1px solid black;
+  margin: 10px 20px 30px 40px;
+  padding: 20px 30px 40px 50px;
+  padding-top: 2px;
+}
+/* class selector */
+.Demo {
+  border: 1px solid red;
+  color: yellowgreen;
+  padding: 20px 30px;
+  margin: 50px;
+}
+/* tag selector */
+p {
+  color: rgb(125, 97, 44) !important;
+}
+
+/* Attribute selector */
+button[type="button"] {
+  color: blue;
+  padding: 20px;
+}
+
+p:nth-child(2) {
+  font-size: 20px;
+  border: 2px solid green;
+}
+
+p:nth-child(2)::after {
+  content: "Hi i am coming from pseudo elements";
+  color: red;
+}

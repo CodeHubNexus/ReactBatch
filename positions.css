@@ -1,0 +1,42 @@
+.container {
+  border: 2px solid red;
+  height: 90vh;
+  width: 60vw;
+  margin-left: 90px;
+}
+
+.relative {
+  position: relative;
+}
+.relative > p {
+  position: absolute;
+  top: 90px;
+  left: -90px;
+  background-color: red;
+}
+
+.sticky > p {
+  position: sticky;
+  top: 20px;
+  left: 40px;
+}
+
+.fixed > p {
+  position: fixed;
+  top: 30px;
+  right: 80px;
+  background-color: red;
+}
+
+/* 576px 768px 992px 1200px */
+@media (max-width: 576px) {
+  .container {
+    border: 10px solid blue;
+    height: 90vh;
+    width: 90vw;
+    margin-left: 30px;
+  }
+  .relative > p {
+    left: -30px;
+  }
+}
