@@ -1,0 +1,21 @@
+.gridItems {
+  border: 1px solid black;
+  color: red;
+  background-color: yellow;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  /* gap: 20px;
+   */
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.a {
+  grid-column-start: -1;
+  grid-column-end: -3;
+}

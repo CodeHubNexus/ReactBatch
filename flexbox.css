@@ -1,0 +1,19 @@
+.flexItems {
+  border: 1px solid black;
+  background-color: yellow;
+  color: red;
+  font-size: 24px;
+  font-weight: 700;
+  width: 200px;
+}
+
+.flexContainer {
+  border: 10px solid red;
+  padding: 10px;
+
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+
+  /* gap: 20px; */
+}
