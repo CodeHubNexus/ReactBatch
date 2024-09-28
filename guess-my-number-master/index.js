@@ -41,7 +41,6 @@ const checkValue = () => {
 
     if (Number(score.innerHTML) > Number(highScore.innerHTML)) {
       highScore.innerHTML = scores;
-      console.log("fgfh");
     }
   } else if (guessValue < RandomNumber) {
     // 3.3 Number is low or not
