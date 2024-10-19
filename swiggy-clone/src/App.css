@@ -1,0 +1,44 @@
+body {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 40%; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  /* opacity: 0.2; */
+  height: 70px;
+  padding: 10px 50px;
+}
+
+.a {
+  margin-top: 100px;
+}
+.navItems {
+  margin-right: 140px;
+}
+.navItems > ul > li > a {
+  color: black;
+  text-decoration: none;
+}
+
+.navItems ul {
+  display: flex;
+  gap: 70px;
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 200px;
+}
+
+.navItems ul li .active {
+  color: blue;
+}
