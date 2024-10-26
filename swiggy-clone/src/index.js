@@ -5,12 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./Loader";
+import Home from "./Pages/Home";
+import Restaurant from "./Pages/Reastaurant";
+import ProtectedRoute from "./UI/ProtectedRoute";
+import { AuthProvider } from "./UI/AuthContext";
 // import Home from "./Home";
 // import Help from "./Help";
 // import Search from "./Search";
 // import Cart from "./Cart";
 
-const Home = lazy(() => import("./Home"));
+// const Home = lazy(() => import("./Home"));
 const Help = lazy(() => import("./Help"));
 const Search = lazy(() => import("./Search"));
 const Cart = lazy(() => import("./Cart"));
@@ -24,8 +28,9 @@ const routes = createBrowserRouter([
         path: "/",
         element: (
           <Suspense fallback={<Loader />}>
-            {" "}
-            <Home />
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
           </Suspense>
         ),
       },
@@ -36,6 +41,10 @@ const routes = createBrowserRouter([
             <Help />
           </Suspense>
         ),
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <Restaurant />,
       },
       {
         path: "/search",
@@ -70,7 +79,9 @@ const routes = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={routes}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={routes}></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
 

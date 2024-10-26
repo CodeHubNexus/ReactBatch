@@ -1,11 +1,18 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { FetchContext } from "./UI/fetchContext";
+import { useAuth } from "./UI/AuthContext";
 
 const Header = () => {
+  const { isAuthenticated, login, logout } = useAuth();
   return (
     <div className="header">
       <div className="logocontainer">
         <NavLink to={"/"}>Logo</NavLink>
       </div>
+      <button onClick={isAuthenticated ? logout : login}>
+        {isAuthenticated ? "logout" : "login"}
+      </button>
       <div className="navItems">
         <ul>
           <li>
