@@ -9,6 +9,7 @@ import Home from "./Pages/Home";
 import Restaurant from "./Pages/Reastaurant";
 import ProtectedRoute from "./UI/ProtectedRoute";
 import { AuthProvider } from "./UI/AuthContext";
+import Search from "./Pages/Search";
 // import Home from "./Home";
 // import Help from "./Help";
 // import Search from "./Search";
@@ -16,7 +17,7 @@ import { AuthProvider } from "./UI/AuthContext";
 
 // const Home = lazy(() => import("./Home"));
 const Help = lazy(() => import("./Help"));
-const Search = lazy(() => import("./Search"));
+// const Search = lazy(() => import("./Search"));
 const Cart = lazy(() => import("./Cart"));
 
 const routes = createBrowserRouter([
@@ -50,7 +51,6 @@ const routes = createBrowserRouter([
         path: "/search",
         element: (
           <Suspense fallback={<Loader />}>
-            {" "}
             <Search />
           </Suspense>
         ),
